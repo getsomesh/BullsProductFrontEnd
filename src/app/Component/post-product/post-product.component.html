@@ -1,0 +1,42 @@
+<div class="dialog-container">
+    <div class="dialog-header" fxLayout="row">
+        <div fxFlex="90">Post a product</div>
+        <div fxFlex="10" fxLayoutAlign="end center" (click)="close(0)" style="cursor: pointer;">X</div>
+    </div>
+    <div class="dialog-content">
+        <form [formGroup]="formgroup" autocomplete="false" (ngSubmit)="SubmitClick()" fxLayout="column">
+            <div fxLayout="row">
+                <mat-form-field fxFlex="50%">
+                    <input type="text" fxFlex="90%" placeholder="Product Name" formControlName="ProductName" required />
+                </mat-form-field>
+            </div>
+            <div fxLayout="row">
+                <mat-form-field fxFlex="50%">
+                    <input type="text" fxFlex="90%" placeholder="Product Description"
+                        formControlName="ProductDescription" required />
+                </mat-form-field>
+            </div>
+            <div fxLayout="row">
+                <mat-form-field fxFlex="50%">
+                    <input type="text" fxFlex="90%" placeholder="Product Category" formControlName="ProductCategory"
+                        required />
+                </mat-form-field>
+            </div>
+            <div fxLayout="row">
+                <mat-form-field fxFlex="50%">
+                    <input type="text" fxFlex="90%" placeholder="Product Website" formControlName="ProductWebsite"
+                        required />
+                </mat-form-field>
+            </div>
+            <div fxLayout="row" fxFlex="70%">
+                <mat-form-field fxFlex="100%">
+                    <input type="file" placeholder="Choose Photos" formControlName="SelectedImages" />
+                </mat-form-field>
+            </div>
+            <div class="form-action-buttons" fxLayoutAlign="end center" fxLayout="row" fxLayoutGap="10px">
+                <button mat-raised-button type="button">cancel</button>
+                <button mat-raised-button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

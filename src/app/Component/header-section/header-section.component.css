@@ -1,0 +1,65 @@
+.header-container {
+  height: 100px;
+  box-shadow: 1px 7px 10px #ccc;
+}
+
+.menu-data {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.menu-container:hover {
+  background-color: #dceef6;
+}
+
+.menu-container {
+  position: relative;
+}
+
+.sub-menu-section {
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  padding: 20px;
+  font-size: 14px;
+  list-style: none;
+  position: absolute;
+  background: white;
+  box-shadow: 1px 5px 4px #ccc;
+  width: 250px;
+  min-height: 50px;
+  max-height: 300px;
+  overflow-y: auto;
+  top: 100px;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.95);
+  transform-origin: 50% 0;
+  transition: all 0.4s ease;
+}
+
+
+.signup-button:hover {
+  background: linear-gradient(227deg, #ff4582, #ff6154) !important;
+}
+
+.signup-button {
+  background-color: #ff4582;
+  color: #fff;
+}
+
+.search-box.input {
+  width: 70%;
+
+}

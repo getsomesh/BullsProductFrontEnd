@@ -1,0 +1,32 @@
+<div class="dialog-container">
+    <div class="dialog-header" fxLayout="row">
+        <div fxFlex="90">New Discussion</div>
+        <div fxFlex="10" fxLayoutAlign="end center" (click)="close(0)" style="cursor: pointer;">X</div>
+    </div>
+    <div class="dialog-content">
+        <form [formGroup]="formgroup" (ngSubmit)="SubmitClick()" fxLayout="column">
+            <div fxLayout="row" fxFlex="100">
+                <mat-form-field fxFlex="70">
+                    <input type="text" fxFlex="100" placeholder="ex. Riskiest move, did it pay off?"
+                        formControlName="DiscussionHeader" required />
+                </mat-form-field>
+            </div>
+            <div fxLayout="row" fxFlex="100">
+                <mat-form-field fxFlex="70">
+                    <textarea placeholder="Text (Optional)" formControlName="DiscussionPoints" required></textarea>
+                </mat-form-field>
+            </div>
+            <!-- <div fxLayout="row" fxFlex="100">
+                <mat-form-field fxFlex="70">
+                                        <mat-select formControlName="SelectedTopic" >
+                        <mat-option *ngFor="let options of topic" [value]="options">{{options}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div> -->
+            <div class="form-action-buttons" fxLayoutAlign="end center" fxLayout="row" fxLayoutGap="10px">
+                <button mat-raised-button type="button">cancel</button>
+                <button mat-raised-button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

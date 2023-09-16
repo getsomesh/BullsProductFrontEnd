@@ -1,0 +1,50 @@
+<div class="header-container" fxLayout="row">
+    <div class="search-bar" fxFlex="20%" fxLayoutAlign="center center">
+        <div fxLayout="row">
+            <div fxLayout="row" fxFlex="100%">
+                <input class="search-box" matInput fxFlex="90%" [(ngModel)]="SearchText" (keyup)="applyFilter($event)"
+                    class="input-box" [placeholder]="'Search'">
+
+            </div>
+        </div>
+    </div>
+    <div class="menus-section" fxLayout="row" fxFlex="45%">
+        <div class="menu-container dropdown" *ngFor="let menu of MenuList" fxFlex="20%" fxLayoutAlign="center center">
+            <div class="menu-data" (click)="subMenuClicked(menu)">{{menu.value}}</div>
+            <div class="menu-sub-list dropdown-content" *ngIf="menu.SubMenus?.length">
+                <div class="sub-menu-section" *ngFor="let subMenu of menu.SubMenus">
+                    <a class="sub-menu__single" fxLayoutAlign="center center"
+                        (click)="subMenuClicked(subMenu)">{{subMenu.Name }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="action-buttons" *ngIf="loggedIn" fxFlex="35%" fxLayoutAlign="end center">
+        <div fxFlex="60%" class="text-button" style="text-align: end;" (click)="postProduct()">How to Post a Product?
+        </div>
+        <div class="action-buttons" fxLayout="row" fxFlex="40%" fxLayoutGap="20px">
+            <div class fxLayoutAlign="center center" fxFlex="50%" (click)="signin()">
+                <div class="text-button">Sign In</div>
+            </div>
+            <div fxLayoutAlign="center center" fxFlex="50%">
+                <button class="signup-button" type="button" color="white" mat-raised-button>Sign Up</button>
+            </div>
+        </div>
+    </div>
+    <div class="action-buttons" *ngIf="!loggedIn" fxFlex="35%" fxLayout="row">
+        <div class="dropdown" fxLayout="row" fxFlex="60%" fxLayoutAlign="end center">
+            <div class="text-button">Submit</div>
+            <div class="menu-sub-list dropdown-content">
+                <div class="sub-menu-section">
+                    <a class="sub-menu__single" fxLayoutAlign="center center" (click)="postProduct()">New Product</a>
+                </div>
+                <div class="sub-menu-section">
+                    <a class="sub-menu__single" fxLayoutAlign="center center" (click)="postDiscussion()">New
+                        Discussion</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="myprofile-section" fxFlex="5%"></div>
+    </div>
+</div>

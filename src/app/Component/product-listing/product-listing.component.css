@@ -1,0 +1,106 @@
+.listing-header {
+  border-bottom: 1px solid #ccc;
+  padding: 20px
+}
+
+.product-listing-container {
+  width: 60%;
+  margin: 30px;
+  height: calc(100vh - 100px);
+  border-right: 1px solid #ccc;
+}
+
+.header {
+  color: #21293c;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.featured {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+  cursor: pointer;
+
+}
+
+.featured:hover {
+  color: #ff6154;
+}
+
+
+.product-header {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+}
+
+.sub-header {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 600;
+  height: 75px;
+}
+
+.hashtags {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 0px 5px;
+}
+
+.product-image {
+  width: 130px;
+  height: 130px;
+  border-radius: 5px;
+}
+
+.upvote-icon {
+  background-image: url(https://ph-static.imgix.net/upvote-burst-2022.png?format=auto&auto=compress);
+  width: 45px;
+  height: 26px;
+  background-position: 0;
+  background-repeat: no-repeat;
+  background-size: 2900%;
+}
+
+.voting-section {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 85px;
+  padding: 10px;
+}
+
+.voting-section:hover {
+  border-color: #ff6154;
+}
+
+.product-card {
+  margin: 20px;
+  background-color: #fff;
+  background-image: linear-gradient(12deg, #fff 50%, hsla(0, 0%, 100%, 0));
+  -webkit-transition: background-color .3s ease-in;
+  transition: background-color .3s ease-in;
+}
+
+.product-card:hover {
+  background-color: #feede6;
+  cursor: pointer;
+  border-radius: 4px;
+
+}
+
+.product-content {
+  padding: 0px 10px;
+}

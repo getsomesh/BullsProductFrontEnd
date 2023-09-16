@@ -1,0 +1,9 @@
+.page-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header-content {
+    height: 300px;
+    place-content: center;
+}
