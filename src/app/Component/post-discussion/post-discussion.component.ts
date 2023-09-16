@@ -12,7 +12,7 @@ export class PostDiscussionComponent {
   DiscussionPoints: string = '';
   SelectedTopic: string = '';
   topic = [
-    'Design', 'Ask me anything', 'Artificial Intelligence', 'Development', 'Marketing'
+    'Design', 'Ask me anything', 'Artificial Intelligence', 'Development', 'Marketing', 'Introduce Yourself', 'Launch Tips', 'Ask for Feedback'
   ];
 
   formgroup: FormGroup;

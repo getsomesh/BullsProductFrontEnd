@@ -54,8 +54,9 @@ input {
 .mat-mdc-form-field-subscript-wrapper {
   display: none !important;
 }
-.mat-mdc-form-field-infix{
-    padding-top: 8px !important;
+
+.mat-mdc-form-field-infix {
+  padding-top: 8px !important;
 }
 
 
@@ -77,11 +78,26 @@ input {
   padding: 20px;
 }
 
-textarea{
-    width: 90%;
-    height: 100px;
-    margin: 5px;
-    border-radius: 4px;
-    border-color: #ccc;
-    padding: 15px;
+textarea {
+  width: 90%;
+  height: 100px;
+  margin: 5px;
+  border-radius: 4px;
+  border-color: #ccc;
+  padding: 15px;
+}
+
+.upvote-icon {
+  background-image: url(https://ph-static.imgix.net/upvote-burst-2022.png?format=auto&auto=compress);
+  width: 45px;
+  height: 26px;
+  background-position: 0;
+  background-repeat: no-repeat;
+  background-size: 2900%;
+}
+
+.author-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
 }

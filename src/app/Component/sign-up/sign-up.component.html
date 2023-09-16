@@ -1,1 +1,40 @@
-<p>sign-up works!</p>
+<div class="dialog-container">
+    <div class="dialog-header" fxLayout="row">
+        <div fxFlex="90">Sign Up</div>
+        <div fxFlex="10" fxLayoutAlign="end center" (click)="close(0)" style="cursor: pointer;">X</div>
+    </div>
+    <div class="dialog-content">
+        <form [formGroup]="formgroup" autocomplete="false" (ngSubmit)="SubmitClick()" fxLayout="column">
+            <div fxLayout="row">
+                <mat-form-field fxFlex="50%">
+                    <input type="text" fxFlex="90%" placeholder="First Name" formControlName="FirstName" required />
+                </mat-form-field>
+            </div>
+            <div fxLayout="row">
+                <mat-form-field fxFlex="50%">
+                    <input type="text" fxFlex="90%" placeholder="Last Name" formControlName="LastName" required />
+                </mat-form-field>
+            </div>
+            <div fxLayout="row">
+                <mat-form-field fxFlex="50%">
+                    <input type="text" fxFlex="90%" placeholder="Email" formControlName="Email" required />
+                </mat-form-field>
+            </div>
+            <div fxLayout="row">
+                <mat-form-field fxFlex="50%">
+                    <input type="text" fxFlex="90%" placeholder="Password" formControlName="Password" required />
+                </mat-form-field>
+            </div>
+            <div fxLayout="row">
+                <mat-form-field fxFlex="50%">
+                    <input type="text" fxFlex="90%" placeholder="Confirm Password" formControlName="ConfirmPassword"
+                        required />
+                </mat-form-field>
+            </div>
+            <div class="form-action-buttons" fxLayoutAlign="end center" fxLayout="row" fxLayoutGap="10px">
+                <button mat-raised-button type="button" (click)="close(0)">cancel</button>
+                <button mat-raised-button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

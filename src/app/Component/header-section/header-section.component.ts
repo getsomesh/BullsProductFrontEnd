@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { SignInComponent } from '../sign-in/sign-in.component';
 import { PostProductComponent } from '../post-product/post-product.component';
 import { PostDiscussionComponent } from '../post-discussion/post-discussion.component';
+import { SignUpComponent } from '../sign-up/sign-up.component';
 
 @Component({
   selector: 'app-header-section',
@@ -43,7 +44,17 @@ export class HeaderSectionComponent {
     });
   }
 
-  postProduct(){
+  signup() {
+    const dialogRef = this.dialog.open(SignUpComponent, {
+      width: '40%',
+      height: 'auto',
+    });
+    dialogRef.afterClosed().subscribe(res => {
+
+    });
+  }
+
+  postProduct() {
     const dialogRef = this.dialog.open(PostProductComponent, {
       width: '40%',
       height: 'auto',
@@ -52,7 +63,7 @@ export class HeaderSectionComponent {
 
     });
   }
-  postDiscussion(){
+  postDiscussion() {
     const dialogRef = this.dialog.open(PostDiscussionComponent, {
       width: '40%',
       height: 'auto',

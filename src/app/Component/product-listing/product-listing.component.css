@@ -66,15 +66,6 @@
   border-radius: 5px;
 }
 
-.upvote-icon {
-  background-image: url(https://ph-static.imgix.net/upvote-burst-2022.png?format=auto&auto=compress);
-  width: 45px;
-  height: 26px;
-  background-position: 0;
-  background-repeat: no-repeat;
-  background-size: 2900%;
-}
-
 .voting-section {
   border: 1px solid #ccc;
   border-radius: 4px;

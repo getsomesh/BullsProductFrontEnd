@@ -15,6 +15,7 @@ import { MaterialModule } from './material/material.module';
 import { DiscussionsComponent } from './Component/discussions/discussions.component';
 import { PostProductComponent } from './Component/post-product/post-product.component';
 import { PostDiscussionComponent } from './Component/post-discussion/post-discussion.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,9 @@ import { PostDiscussionComponent } from './Component/post-discussion/post-discus
     ReactiveFormsModule,
     FlexLayoutModule,
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

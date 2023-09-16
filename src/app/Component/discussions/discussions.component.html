@@ -2,10 +2,44 @@
     <div class="header-content" fxLayout="column">
         <h1> Discussions</h1>
         <h2 style="opacity:0.5">Ask questions, find support, and connect with the community.</h2>
-        <div class="button-section" style="margin: 10px 0px;"> <button mat-raised-button type="button" (click)="gotoNewDiscussion()"> New Discussion</button>
+        <div class="button-section" style="margin: 10px 0px;"> <button mat-raised-button type="button"
+                (click)="gotoNewDiscussion()"> New Discussion</button>
         </div>
     </div>
-    <div class="comment-section">
-        
+    <div fxLayout="row">
+        <div class="comment-section" fxFlex="70%">
+            <div fxLayout="row">
+                <div class="comment-header" style="text-align: center;padding: 10px 0px;" (click)="goToNew()"
+                    fxFlex="7%">
+                    New</div>
+                <div class="comment-header" style="text-align: center;padding: 10px 0px;" (click)="goToPopular()"
+                    fxFlex="7%">Popular</div>
+            </div>
+
+            <div class="comment-listing">
+                <div class="comment-card" fxLayout="row" *ngFor="let comments of commentsList">
+                    <div fxFlex="12%"> <img class="author-image" src="../../../assets/Images/default.jpg"
+                            alt="default-image" /></div>
+                    <div fxFlex="12%" fxLayout="row" fxLayoutAlign="center center">
+                        <div> {{comments.Votes}}</div>
+                        <div class="upvote-icon"></div>
+                    </div>
+                    <div fxFlex="76%" fxLayout="column" style="padding: 10px;">
+                        <div style="margin-bottom: 5px; font-size: 20px;">{{comments.CommentData}}</div>
+                        <div fxLayout="row" fxLayoutGap="20px">
+                            <div>{{comments.AuthorName}}</div>
+                            <div>{{comments.Replies}} replies</div>
+                            <div>{{comments.timeperiod}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-section" fxFlex="30%" style="border-left: 1px solid #ccc;padding: 0px 30px;" fxLayout="column">
+            <h3>TOPICS</h3>
+            <div class="topic-listing" *ngFor="let topic of topics" fxLayout="column">
+                <div style="padding:10px; text-align: left;width: 200px;">{{topic}}</div>
+            </div>
+        </div>
     </div>
 </div>
