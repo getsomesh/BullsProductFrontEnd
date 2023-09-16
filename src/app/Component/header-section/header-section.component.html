@@ -19,7 +19,7 @@
             </div>
         </div>
     </div>
-    <div class="action-buttons" *ngIf="loggedIn" fxFlex="35%" fxLayoutAlign="end center">
+    <div class="action-buttons" *ngIf="!loggedIn" fxFlex="35%" fxLayoutAlign="end center">
         <div fxFlex="60%" class="text-button" style="text-align: end;" (click)="postProduct()">How to Post a Product?
         </div>
         <div class="action-buttons" fxLayout="row" fxFlex="40%" fxLayoutGap="20px">
@@ -31,7 +31,7 @@
             </div>
         </div>
     </div>
-    <div class="action-buttons" *ngIf="!loggedIn" fxFlex="35%" fxLayout="row">
+    <div class="action-buttons" *ngIf="loggedIn" fxFlex="35%" fxLayout="row">
         <div class="dropdown" fxLayout="row" fxFlex="60%" fxLayoutAlign="end center">
             <div class="text-button">Submit</div>
             <div class="menu-sub-list dropdown-content">
