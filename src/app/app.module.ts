@@ -16,6 +16,7 @@ import { DiscussionsComponent } from './Component/discussions/discussions.compon
 import { PostProductComponent } from './Component/post-product/post-product.component';
 import { PostDiscussionComponent } from './Component/post-discussion/post-discussion.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductDetailsComponent } from './Component/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     SignUpComponent,
     DiscussionsComponent,
     PostProductComponent,
-    PostDiscussionComponent
+    PostDiscussionComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

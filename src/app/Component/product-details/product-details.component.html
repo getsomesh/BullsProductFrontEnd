@@ -1,0 +1,26 @@
+<div class="dialog-container">
+    <div class="dialog-header" fxLayout="row">
+        <div fxFlex="100" fxLayoutAlign="end center" (click)="close(0)" style="cursor: pointer;">X</div>
+    </div>
+    <div class="dialog-content" style="padding: 20px 50px;max-height: 500px;overflow-y: auto;margin: 50px 0px;">
+        <div fxLayout="row">
+            <div fxLayout="column" fxFlex="60">
+                <h1>{{ProductData.Name}}</h1>
+                <h2>{{ProductData.SubHeader}}</h2>
+            </div>
+            <div fxLayout="row" fxFlex="40" fxLayoutGap="40px">
+                <div class="visit-button" style="height: 20px;">Visit</div>
+                <div fxLayout="row" class="upvote-button" fxLayoutAlign="center center"
+                    style="height: 60px;width: 140px;">
+                    <div class="upvote-icon"></div>
+                    <div>UPVOTE {{ProductData.TotalVotes}}</div>
+                </div>
+            </div>
+        </div>
+        <div style="font-size: 16px;opacity: 0.7;">
+            Capture your ideas, streamline tasks and get automated organization features with the ClickUp GTD System.
+            Inspired by David Allen's GTD methodology and crafted for ClickUp, it's your toolkit to productivity and
+            success.
+        </div>
+    </div>
+</div>

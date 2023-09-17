@@ -5,6 +5,7 @@ import { SignInComponent } from '../sign-in/sign-in.component';
 import { PostProductComponent } from '../post-product/post-product.component';
 import { PostDiscussionComponent } from '../post-discussion/post-discussion.component';
 import { SignUpComponent } from '../sign-up/sign-up.component';
+import { ApiService } from 'src/app/Services/api.service';
 
 @Component({
   selector: 'app-header-section',
@@ -23,7 +24,7 @@ export class HeaderSectionComponent {
     { key: 3, value: 'Community', SubMenus: [{ Name: 'Discussions', Route: 'discussions' }] },
     { key: 4, value: 'Advertise' }, { key: 5, value: 'About', SubMenus: [{ Name: 'About Us', Route: 'aboutus' }, { Name: 'FAQs', Route: 'faqs' }] }];
 
-  constructor(private router: Router, public dialog: MatDialog) { }
+  constructor(private router: Router, public dialog: MatDialog, public apiService: ApiService) { }
 
 
   applyFilter(event: KeyboardEvent) { }

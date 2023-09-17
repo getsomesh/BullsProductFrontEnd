@@ -19,7 +19,7 @@
             </div>
         </div>
     </div>
-    <div class="action-buttons" *ngIf="!loggedIn" fxFlex="35%" fxLayoutAlign="end center">
+    <div class="action-buttons" *ngIf="!apiService.loggedIn" fxFlex="35%" fxLayoutAlign="end center">
         <div fxFlex="60%" class="text-button" style="text-align: end;" (click)="postProduct()">How to Post a Product?
         </div>
         <div class="action-buttons" fxLayout="row" fxFlex="40%" fxLayoutGap="20px">
@@ -27,11 +27,12 @@
                 <div class="text-button">Sign In</div>
             </div>
             <div fxLayoutAlign="center center" fxFlex="50%">
-                <button class="signup-button" type="button" color="white" mat-raised-button (click)="signup()">Sign Up</button>
+                <button class="signup-button" type="button" color="white" mat-raised-button (click)="signup()">Sign
+                    Up</button>
             </div>
         </div>
     </div>
-    <div class="action-buttons" *ngIf="loggedIn" fxFlex="35%" fxLayout="row">
+    <div class="action-buttons" *ngIf="apiService.loggedIn" fxFlex="35%" fxLayout="row">
         <div class="dropdown" fxLayout="row" fxFlex="60%" fxLayoutAlign="end center">
             <div class="text-button">Submit</div>
             <div class="menu-sub-list dropdown-content">
@@ -45,6 +46,16 @@
                 </div>
             </div>
         </div>
-        <div class="myprofile-section" fxFlex="5%"></div>
+        <div class="myprofile-section dropdown" fxLayoutAlign="end center" *ngIf="apiService.loggedIn" fxFlex="30%">
+            <div><img style="    width: 50px;
+                height: 50px;
+                border-radius: 50%;" src="../../../assets/Images/default.jpg" /></div>
+            <div class="menu-sub-list dropdown-content" style="width: 100px;">
+                <div class="sub-menu-section" style="width: 60px;">
+                    <a class="sub-menu__single" fxLayoutAlign="center center"
+                        (click)="apiService.loggedIn = !apiService.loggedIn">Logout</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
