@@ -17,7 +17,7 @@ export class ApiService {
 
   SignupUser(request: any) {
     return this.http.post(
-       'APINAME',
+       'https://localhost:7014/api/Values/Signup',
        request,
       this.httpOptions
     );
