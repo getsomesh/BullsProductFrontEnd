@@ -22,7 +22,7 @@ export class SignInComponent {
     }
 
     this.apiService.SigninUser(req).subscribe(data => {
-      if(data == 200){
+      if(data == true){
         this.apiService.loggedIn = true;
         this.dialogRef.close(0);
       }

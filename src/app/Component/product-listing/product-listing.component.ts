@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { PostDiscussionComponent } from '../post-discussion/post-discussion.component';
 import { ProductDetailsComponent } from '../product-details/product-details.component';
+import { ApiService } from 'src/app/Services/api.service';
 
 @Component({
   selector: 'app-product-listing',
@@ -10,10 +11,53 @@ import { ProductDetailsComponent } from '../product-details/product-details.comp
 })
 export class ProductListingComponent {
   Products = [{
-    Name: 'DevHunt',
-    SubHeader: 'Open source Product Hunt for dev tools',
+    Name: 'Fitmint',
+    SubHeader: 'Earn NFTs and crypto tokens for staying fit',
     HashTags: ['openSource', 'devtools', 'github'],
-    TotalVotes: 79
+    TotalVotes: 79 ,
+    Image: "../../../assets/Images/fitmint.png"
+  },
+  {
+    Name: 'Student OS',
+    SubHeader: 'Your buddy in everyday student life',
+    HashTags: ['education', 'notion', 'productivity'],
+    TotalVotes: 279,
+    Image: "../../../assets/Images/studentos.jpg"
+  },
+  {
+    Name: 'Amplitude',
+    SubHeader: 'Demystify the journey to product-market fit',
+    HashTags: ['tech'],
+    TotalVotes: 29,
+    Image: "../../../assets/Images/amplitude.png"
+  },
+  {
+    Name: 'Expense Tracker',
+    SubHeader: 'Say goodbye to meshy spreadsheets',
+    HashTags: ['money', 'finance', 'github'],
+    TotalVotes: 779,
+    Image: "../../../assets/Images/expensetracker.jpg"
+  },
+  {
+    Name: 'ChatPal',
+    SubHeader: 'Answers, Task, Information - your pal does it all',
+    HashTags: ['AI', 'bots', 'android'],
+    TotalVotes: 412,
+    Image: "../../../assets/Images/chatpal.png"
+  },
+  {
+    Name: 'Formed',
+    SubHeader: 'Build better habits today',
+    HashTags: ['productivity'],
+    TotalVotes: 160,
+    Image: "../../../assets/Images/formed.jpg"
+  },
+  {
+    Name: 'Merge',
+    SubHeader: 'Add hundreds of integrations to your product with one API',
+    HashTags: ['api', 'saas', 'developertools'],
+    TotalVotes: 79,
+    Image: "../../../assets/Images/Merge.jpg"
   }]
 
   TopStories = [
@@ -57,7 +101,15 @@ export class ProductListingComponent {
       timeperiod: '8 mo ago'
     }];
 
-    constructor(public dialog: MatDialog){}
+    constructor(public dialog: MatDialog, private apiservice: ApiService){}
+
+    getProducts(){
+      this.apiservice.GetProducts().subscribe(data => {
+        if(data){
+          
+        }
+      });
+    }
 
     goToProduct(selectedData: any) {
       const dialogRef = this.dialog.open(ProductDetailsComponent, {

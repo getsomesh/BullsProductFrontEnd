@@ -15,6 +15,22 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
+   
+  GetProducts() {
+    return this.http.post(
+       'https://localhost:7014/api/Values/GetProducts',
+      this.httpOptions
+    );
+  }
+
+  PostProduct(request: any) {
+    return this.http.post(
+       'https://localhost:7014/api/Values/PostProduct',
+       request,
+      this.httpOptions
+    );
+  }
+
   SignupUser(request: any) {
     return this.http.post(
        'https://localhost:7014/api/Values/Signup',
