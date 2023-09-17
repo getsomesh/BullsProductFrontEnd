@@ -1,0 +1,14 @@
+.visit-button {
+  padding: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+}
+
+.upvote-button {
+  background-color: #d6375c;
+  border-radius: 5px;
+}
+
+.upvote-button {
+  color: #FFF;
+}
