@@ -9,7 +9,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 })
 export class PostProductComponent {
   formgroup: FormGroup;
-  constructor(private formBuilder: FormBuilder,public dialog: MatDialog, public dialogRef: MatDialogRef<PostProductComponent>,
+  constructor(private formBuilder: FormBuilder, public dialog: MatDialog, public dialogRef: MatDialogRef<PostProductComponent>,
     @Inject(MAT_DIALOG_DATA) public dialogData: any) {
     this.formgroup = this.formBuilder.group({
       ProductName: ['', Validators.required],
@@ -20,8 +20,26 @@ export class PostProductComponent {
     })
   }
 
-  SubmitClick(){}
+  SubmitClick() { }
   close(value: any) {
     this.dialogRef.close(value);
+  }
+  onFileChange(event: any) {
+    if (event.target.files && event.target.files.length) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+        const imagereader = new Image();
+        imagereader.onload = () => {
+          this.formgroup.controls['SelectedImages'].setValue(reader.result ? reader.result : '');
+        };
+        imagereader.src = URL.createObjectURL(file);
+      };
+    }
+  }
+
+  chooseImage() {
+    document.getElementById('Phpto-imag')?.click();
   }
 }

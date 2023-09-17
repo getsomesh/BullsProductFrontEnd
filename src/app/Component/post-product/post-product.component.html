@@ -29,9 +29,8 @@
                 </mat-form-field>
             </div>
             <div fxLayout="row" fxFlex="70%">
-                <mat-form-field fxFlex="100%">
-                    <input type="file" placeholder="Choose Photos" formControlName="SelectedImages" />
-                </mat-form-field>
+                <input (change)="onFileChange($event)" type="file" id="Phpto-imag" (click)="chooseImage()"
+                    accept="image/x-png,image/gif,image/jpeg,image/png" placeholder="Choose Photos" />
             </div>
             <div class="form-action-buttons" fxLayoutAlign="end center" fxLayout="row" fxLayoutGap="10px">
                 <button mat-raised-button type="button">Cancel</button>

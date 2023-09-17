@@ -17,6 +17,8 @@ import { PostProductComponent } from './Component/post-product/post-product.comp
 import { PostDiscussionComponent } from './Component/post-discussion/post-discussion.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductDetailsComponent } from './Component/product-details/product-details.component';
+import { AboutUsComponent } from './Component/about-us/about-us.component';
+import { FaqsComponent } from './Component/faqs/faqs.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { ProductDetailsComponent } from './Component/product-details/product-det
     DiscussionsComponent,
     PostProductComponent,
     PostDiscussionComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    AboutUsComponent,
+    FaqsComponent
   ],
   imports: [
     BrowserModule,

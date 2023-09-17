@@ -1,0 +1,26 @@
+<div style="margin: 0 auto;width: 70%;" fxlayout=" column">
+    <h1 style="text-align: center;padding: 100px;"><I> BullsHunt has become a must-read site in Silicon Valley.</I>
+    </h1>
+    <hr />
+    <div fxLayout="column">
+        <h3 style="text-align: center;
+        margin: 30px;
+        font-size: 24px;">Team</h3>
+        <div fxLayout="row wrap">
+            <div fxFlex="27%" style="margin: 10px 30px;" *ngFor="let team of TeamMembers">
+                <div fxLayout="row">
+                    <img style="width: 70px;
+                        height: 70px;
+                        border-radius: 50%;" [src]="team.Photo" />
+                    <div fxLayout="column">
+                        <div style="    padding: 10px 15px;
+                        font-size: 20px;">{{team.Name}}</div>
+                        <div style="padding: 0px 15px;
+                        font-size: 14px;
+                        opacity: 0.7;">{{team.designation}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
