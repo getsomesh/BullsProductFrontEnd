@@ -1,7 +1,7 @@
 <div class="dialog-container">
     <div class="dialog-header" fxLayout="row">
         <div fxFlex="90">Sign up</div>
-        <div fxFlex="10" fxLayoutAlign="end center" (click)="close(0)" style="cursor: pointer;">X</div>
+        <div fxFlex="10" fxLayoutAlign="end center" (click)="close(0)" style="cursor: pointer;">x</div>
     </div>
     <div class="dialog-content">
         <form [formGroup]="formgroup" autocomplete="false" (ngSubmit)="SubmitClick()" fxLayout="column">
@@ -22,12 +22,12 @@
             </div>
             <div fxLayout="row">
                 <mat-form-field fxFlex="50%">
-                    <input type="text" fxFlex="90%" placeholder="Password" formControlName="Password" required />
+                    <input type="password"  fxFlex="90%" placeholder="Password" formControlName="Password" required />
                 </mat-form-field>
             </div>
             <div fxLayout="row">
                 <mat-form-field fxFlex="50%">
-                    <input type="text" fxFlex="90%" placeholder="Confirm Password" formControlName="ConfirmPassword"
+                    <input type="password"  fxFlex="90%" placeholder="Confirm Password" formControlName="ConfirmPassword"
                         required />
                 </mat-form-field>
             </div>

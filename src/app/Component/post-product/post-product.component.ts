@@ -20,7 +20,9 @@ export class PostProductComponent {
     })
   }
 
-  SubmitClick(){}
+  SubmitClick(){
+    
+  }
   close(value: any) {
     this.dialogRef.close(value);
   }

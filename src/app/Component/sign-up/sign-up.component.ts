@@ -36,8 +36,8 @@ export class SignUpComponent {
     }
 
     this.apiservice.SignupUser(req).subscribe(data => {
-      if(data){
-        
+      if(data == 200){
+        this.dialogRef.close();
       }
     });
   }

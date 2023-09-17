@@ -23,4 +23,12 @@ export class ApiService {
     );
   }
 
+  SigninUser(request: any) {
+    return this.http.post(
+       'https://localhost:7014/api/Values/Signin',
+       request,
+      this.httpOptions
+    );
+  }
+
 }
