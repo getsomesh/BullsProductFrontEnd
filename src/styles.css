@@ -39,7 +39,7 @@ body {
 
 button {
   box-shadow: none !important;
-  background-color: #ff6154 !important;
+  background-color: #0040ff !important;
   color: #fff !important;
 }
 
@@ -61,7 +61,7 @@ input {
 
 
 .text-button {
-  color: #ff4582;
+  color: #0040ff;
   cursor: pointer;
 }
 

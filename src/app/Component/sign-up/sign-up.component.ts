@@ -11,7 +11,7 @@ import { ApiService } from 'src/app/Services/api.service';
 export class SignUpComponent {
   formgroup: FormGroup;
   constructor(private formBuilder: FormBuilder, public dialog: MatDialog, public dialogRef: MatDialogRef<SignUpComponent>,
-    @Inject(MAT_DIALOG_DATA) public dialogData: any, private apiservice: ApiService) {
+    @Inject(MAT_DIALOG_DATA) public dialogData: any, private  apiservice: ApiService) {
     this.formgroup = this.formBuilder.group({
       FirstName: ['', Validators.required],
       LastName: ['', Validators.required],
@@ -36,7 +36,9 @@ export class SignUpComponent {
     }
 
     this.apiservice.SignupUser(req).subscribe(data => {
-      
+      if(data == 200){
+        this.dialogRef.close();
+      }
     });
   }
   close(value: any) {

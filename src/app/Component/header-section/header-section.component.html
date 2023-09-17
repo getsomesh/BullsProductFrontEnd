@@ -20,15 +20,14 @@
         </div>
     </div>
     <div class="action-buttons" *ngIf="!apiService.loggedIn" fxFlex="35%" fxLayoutAlign="end center">
-        <div fxFlex="60%" class="text-button" style="text-align: end;">How to Post a Product?
-        </div>
-        <div class="action-buttons" fxLayout="row" fxFlex="40%" fxLayoutGap="20px">
+        <!-- <div fxFlex="50%" class="text-button" style="text-align: end;" >How to post a product?
+        </div> -->
+        <div class="action-buttons" fxLayout="row" fxFlex="50%">
             <div class fxLayoutAlign="center center" fxFlex="50%" (click)="signin()">
-                <div class="text-button">Sign In</div>
+                <div class="text-button">Sign in</div>
             </div>
             <div fxLayoutAlign="center center" fxFlex="50%">
-                <button class="signup-button" type="button" color="white" mat-raised-button (click)="signup()">Sign
-                    Up</button>
+                <button class="signup-button" type="button" color="white" mat-raised-button (click)="signup()">Sign up</button>
             </div>
         </div>
     </div>

@@ -50,12 +50,12 @@
 }
 
 
-.signup-button:hover {
+/* .signup-button:hover {
   background: linear-gradient(227deg, #ff4582, #ff6154) !important;
-}
+} */
 
 .signup-button {
-  background-color: #ff4582;
+  background-color: #0040ff;
   color: #fff;
 }
 

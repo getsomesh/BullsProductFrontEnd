@@ -14,7 +14,7 @@ import { ApiService } from 'src/app/Services/api.service';
 })
 export class HeaderSectionComponent {
   SearchText = '';
-  loggedIn: boolean = false;
+  loggedIn: boolean = true;
   MenuList = [
     { key: 1, value: 'Products', Route: 'products' },
     {
