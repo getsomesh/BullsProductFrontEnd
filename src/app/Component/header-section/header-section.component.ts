@@ -17,12 +17,12 @@ export class HeaderSectionComponent {
   loggedIn: boolean = true;
   MenuList = [
     { key: 1, value: 'Products', Route: 'products' },
-    {
-      key: 2, value: 'Categories', SubMenus: [
-        { Name: 'Ad blockers' }, { Name: 'App switcher' }, { Name: 'Calendar apps' }, { Name: 'Customer support' }, { Name: 'Email clients' }, { Name: 'E-signature' }, { Name: 'File storage and sharing' }, { Name: 'Hiring software' }, { Name: 'Knowledge base software' }, { Name: 'Legal services' }, { Name: 'Meeting software' }, { Name: 'Note and writing apps' }, { Name: 'Password managers' }, { Name: 'PDF Editor' }, { Name: 'Presentation Software    ' }, { Name: 'Project management software    ' }, { Name: 'Resume tools    ' }, { Name: 'Scheduling software    ' }, { Name: 'Screenshots and screen recording apps    ' }, { Name: 'Search' }]
-    },
+    // {
+    //   key: 2, value: 'Categories', SubMenus: [
+    //     { Name: 'Ad blockers' }, { Name: 'App switcher' }, { Name: 'Calendar apps' }, { Name: 'Customer support' }, { Name: 'Email clients' }, { Name: 'E-signature' }, { Name: 'File storage and sharing' }, { Name: 'Hiring software' }, { Name: 'Knowledge base software' }, { Name: 'Legal services' }, { Name: 'Meeting software' }, { Name: 'Note and writing apps' }, { Name: 'Password managers' }, { Name: 'PDF Editor' }, { Name: 'Presentation Software    ' }, { Name: 'Project management software    ' }, { Name: 'Resume tools    ' }, { Name: 'Scheduling software    ' }, { Name: 'Screenshots and screen recording apps    ' }, { Name: 'Search' }]
+    // },
     { key: 3, value: 'Community', SubMenus: [{ Name: 'Discussions', Route: 'discussions' }] },
-    { key: 4, value: 'Advertise' }, { key: 5, value: 'About', SubMenus: [{ Name: 'About Us', Route: 'aboutus' }, { Name: 'FAQs', Route: 'faqs' }] }];
+    { key: 4, value: 'Advertise' }, { key: 5, value: 'About', SubMenus: [{ Name: 'About Us', Route: 'aboutus' }] }];
 
   constructor(private router: Router, public dialog: MatDialog, public apiService: ApiService) { }
 

@@ -9,11 +9,15 @@
                 <h2>{{ProductData.SubHeader}}</h2>
             </div>
             <div fxLayout="row" fxFlex="40" fxLayoutGap="40px">
-                <div class="visit-button" style="height: 20px;">Visit</div>
+                <div class="visit-button" style="height: 20px;" (click)="ClickVisit(ProductData.URL)">
+                    <a class="sub-menu__single" fxLayoutAlign="center center" >Visit</a>
+                </div>
+                <!-- <div class="visit-button" style="height: 20px;" onclick="ClickVisit(ProductData.URl)">Visit</div> -->
                 <div fxLayout="row" class="upvote-button" fxLayoutAlign="center center"
-                    style="height: 60px;width: 140px;">
+                    style="height: 60px;width: 140px;" (click)="ClickUpvote(ProductData.TotalVotes)">
                     <div class="upvote-icon"></div>
-                    <div>UPVOTE {{ProductData.TotalVotes}}</div>
+                    <a class="sub-menu__single" fxLayoutAlign="center center" >UPVOTE {{ProductData.TotalVotes}}</a>
+                    <!-- <div>UPVOTE {{ProductData.TotalVotes}}</div> -->
                 </div>
             </div>
         </div>

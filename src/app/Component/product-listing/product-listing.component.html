@@ -9,7 +9,7 @@
                 </div>
             </div>
             <div class="listing-section" fxLayout="column">
-                <div *ngFor="let product of Products">
+                <div *ngFor="let product of Products; let i = index">
                     <div class="product-card" fxLayout="row">
                         <div fxFlex="15">
                             <img class="product-image" src={{product.Image}} alt="default-image" />
@@ -21,11 +21,15 @@
                                 <div class="hashtags" *ngFor="let hashtag of product.HashTags">{{'#' + hashtag}}</div>
                             </div>
                         </div>
-                        <div class="product-vote" fxLayout fxFlex="15" fxLayoutAlign="center center">
+                        <div class="product-vote" fxLayout fxFlex="15" fxLayoutAlign="center center" (click)="ClickUpvote(product.TotalVotes, i)">
                             <div fxLayout="column" class="voting-section" fxLayoutGap="10px">
                                 <div class="upvote-icon"></div>
-                                <div class="vote-count" style="text-align: center;">{{product.TotalVotes}}</div>
+                                <!-- <div class="vote-count" style="text-align: center;">{{product.TotalVotes}}</div> -->
+                                <a class="sub-menu__single" fxLayoutAlign="center center" >{{product.TotalVotes}}</a>
+  
                             </div>
+
+                           
                         </div>
                     </div>
                 </div>

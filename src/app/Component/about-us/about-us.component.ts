@@ -7,28 +7,24 @@ import { Component } from '@angular/core';
 })
 export class AboutUsComponent {
   TeamMembers= [{
-    Name:'Ryan Hoover',
+    Name:'Somesh Rajasekar',
     designation:'Founder',
     Photo:'../../../assets/Images/default.jpg'
   },{
-    Name:'Ashley Higgins',
-    designation:'CEO',
+    Name:'Yoginya Iyer',
+    designation:'Co-Founder',
     Photo:'../../../assets/Images/default.jpg'
   },{
-    Name:'John Grange',
-    designation:'Engineering Lead',
+    Name:'Prasad Ugale',
+    designation:'Co-Founder',
     Photo:'../../../assets/Images/default.jpg'
   },{
-    Name:'Richard Siwady',
-    designation:'Software Engineer',
+    Name:'Yashwnth Chittibabu',
+    designation:'Co-Founder',
     Photo:'../../../assets/Images/default.jpg'
   },{
-    Name:'Mike Ciesielka',
-    designation:'Software Engineer',
+    Name:'Sonali Sharma',
+    designation:'Co-Founder',
     Photo:'../../../assets/Images/default.jpg'
-  },{
-    Name:'Emmett Storts',
-    designation:'Data Science',
-    Photo:'../../../assets/Images/default.jpg'
-  }]
+  },]
 }

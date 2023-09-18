@@ -1,5 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { ApiService } from 'src/app/Services/api.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { ApiService } from 'src/app/Services/api.service';
 export class ProductDetailsComponent {
   ProductData: any;
   constructor(public dialog: MatDialog, public dialogRef: MatDialogRef<ProductDetailsComponent>,
-    @Inject(MAT_DIALOG_DATA) public dialogData: any, public apiService: ApiService){
+    @Inject(MAT_DIALOG_DATA) public dialogData: any, public apiService: ApiService, private route : Router){
 
       this.ProductData = this.dialogData;
     }
@@ -19,4 +20,12 @@ export class ProductDetailsComponent {
     close(value: any) {
       this.dialogRef.close(value);
     }
+
+    ClickVisit(url : string){
+      window.open(url, "_blank");}
+
+      ClickUpvote(value : string){
+        this.ProductData.TotalVotes = value + 1;
+        
+       }
 }

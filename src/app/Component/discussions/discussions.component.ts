@@ -12,45 +12,45 @@ export class DiscussionsComponent {
     {
       AuthorImage: '',
       AuthorName: 'Alex',
-      CommentData: 'How do you get people to invite their friends to compete for cash prizes?',
-      Votes: '230',
+      CommentData: 'Who else is working on a Sunday?',
+      Votes: 23,
       Replies: '19',
-      timeperiod: '8 mo ago'
+      timeperiod: '24 hours ago'
     }, {
       AuthorImage: '',
-      AuthorName: 'Alex',
-      CommentData: 'How do you get people to invite their friends to compete for cash prizes?',
-      Votes: '230',
-      Replies: '19',
-      timeperiod: '8 mo ago'
+      AuthorName: 'Joana',
+      CommentData: "What's your favourite tools from last week in Bulls product?",
+      Votes: 105,
+      Replies: '59',
+      timeperiod: '2 days ago'
     }, {
       AuthorImage: '',
-      AuthorName: 'Alex',
-      CommentData: 'How do you get people to invite their friends to compete for cash prizes?',
-      Votes: '230',
-      Replies: '19',
-      timeperiod: '8 mo ago'
+      AuthorName: 'Elon',
+      CommentData: 'How do you feel about people giving answers they generated with ChatGPT?',
+      Votes: 30,
+      Replies: '5',
+      timeperiod: '1 week ago'
     }, {
       AuthorImage: '',
-      AuthorName: 'Alex',
-      CommentData: 'How do you get people to invite their friends to compete for cash prizes?',
-      Votes: '230',
-      Replies: '19',
-      timeperiod: '8 mo ago'
+      AuthorName: 'Jeff',
+      CommentData: 'What are your top 3 products you use on a daily basis at work?',
+      Votes: 64,
+      Replies: '11',
+      timeperiod: '2 hours ago'
     }, {
       AuthorImage: '',
-      AuthorName: 'Alex',
-      CommentData: 'How do you get people to invite their friends to compete for cash prizes?',
-      Votes: '230',
-      Replies: '19',
-      timeperiod: '8 mo ago'
+      AuthorName: 'Mark',
+      CommentData: 'What are your top 5 tools for content creation?',
+      Votes: 78,
+      Replies: '8',
+      timeperiod: '1 mo ago'
     }, {
       AuthorImage: '',
-      AuthorName: 'Alex',
-      CommentData: 'How do you get people to invite their friends to compete for cash prizes?',
-      Votes: '230',
-      Replies: '19',
-      timeperiod: '8 mo ago'
+      AuthorName: 'Tim',
+      CommentData: 'What keeps you motivated?',
+      Votes: 87,
+      Replies: '22',
+      timeperiod: '4 days ago'
     }
   ];
   topics = [
@@ -66,6 +66,10 @@ export class DiscussionsComponent {
 
     });
   }
+
+  ClickUpvote(value : number, index : number){
+    this.commentsList[index].Votes = this.commentsList[index].Votes + 1;
+   }
 
   goToPopular() { }
   goToNew() { }

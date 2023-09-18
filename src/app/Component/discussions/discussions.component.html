@@ -17,11 +17,13 @@
             </div>
 
             <div class="comment-listing">
-                <div class="comment-card" fxLayout="row" *ngFor="let comments of commentsList">
+                <div class="comment-card" fxLayout="row" *ngFor="let comments of commentsList; let i = index">
                     <div fxFlex="12%"> <img class="author-image" src="../../../assets/Images/default.jpg"
                             alt="default-image" /></div>
-                    <div fxFlex="12%" fxLayout="row" fxLayoutAlign="center center">
-                        <div> {{comments.Votes}}</div>
+                    <div fxFlex="12%" fxLayout="row"  fxLayoutAlign="center center" class="cursor-pointer" (click)="ClickUpvote(comments.Votes, i)">
+                        <!-- <div> {{comments.Votes}}</div> -->
+
+                        <a>{{comments.Votes}}</a>
                         <div class="upvote-icon"></div>
                     </div>
                     <div fxFlex="76%" fxLayout="column" style="padding: 10px;">

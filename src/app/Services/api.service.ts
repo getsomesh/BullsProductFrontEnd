@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class ApiService {
 
-  public loggedIn: boolean = false;
+  public loggedIn: boolean = true;
   public httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'

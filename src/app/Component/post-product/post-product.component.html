@@ -6,6 +6,7 @@
     <div class="dialog-content">
         <form [formGroup]="formgroup" autocomplete="false" (ngSubmit)="SubmitClick()" fxLayout="column">
             <div fxLayout="row">
+              <mat-label></mat-label>
                 <mat-form-field fxFlex="50%">
                     <input type="text" fxFlex="90%" placeholder="Product Name" formControlName="ProductName" required />
                 </mat-form-field>
@@ -18,7 +19,7 @@
             </div>
             <div fxLayout="row">
                 <mat-form-field fxFlex="50%">
-                    <input type="text" fxFlex="90%" placeholder="Product Category" formControlName="ProductCategory"
+                    <input type="text" fxFlex="90%" placeholder="Hashtags" formControlName="ProductCategory"
                         required />
                 </mat-form-field>
             </div>

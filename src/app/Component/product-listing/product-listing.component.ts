@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { PostDiscussionComponent } from '../post-discussion/post-discussion.component';
 import { ProductDetailsComponent } from '../product-details/product-details.component';
@@ -9,12 +9,17 @@ import { ApiService } from 'src/app/Services/api.service';
   templateUrl: './product-listing.component.html',
   styleUrls: ['./product-listing.component.css']
 })
+
+@Injectable({
+  providedIn: 'root'
+})
 export class ProductListingComponent {
   Products = [{
     Name: 'Fitmint',
     SubHeader: 'Earn NFTs and crypto tokens for staying fit',
     HashTags: ['openSource', 'devtools', 'github'],
     TotalVotes: 79 ,
+    URL: "https://fitmint.io/",
     Image: "../../../assets/Images/fitmint.png"
   },
   {
@@ -22,6 +27,7 @@ export class ProductListingComponent {
     SubHeader: 'Your buddy in everyday student life',
     HashTags: ['education', 'notion', 'productivity'],
     TotalVotes: 279,
+    URL: "https://www.notion.so/templates/student-os",
     Image: "../../../assets/Images/studentos.jpg"
   },
   {
@@ -29,6 +35,7 @@ export class ProductListingComponent {
     SubHeader: 'Demystify the journey to product-market fit',
     HashTags: ['tech'],
     TotalVotes: 29,
+    URL: "https://amplitude.com/  ",
     Image: "../../../assets/Images/amplitude.png"
   },
   {
@@ -36,6 +43,7 @@ export class ProductListingComponent {
     SubHeader: 'Say goodbye to meshy spreadsheets',
     HashTags: ['money', 'finance', 'github'],
     TotalVotes: 779,
+    URL: "https://iamsourabhshen.gumroad.com/l/expense-tracker/PH100?ref=producthunt",
     Image: "../../../assets/Images/expensetracker.jpg"
   },
   {
@@ -43,6 +51,7 @@ export class ProductListingComponent {
     SubHeader: 'Answers, Task, Information - your pal does it all',
     HashTags: ['AI', 'bots', 'android'],
     TotalVotes: 412,
+    URL: "http://chatpalapp.com/",
     Image: "../../../assets/Images/chatpal.png"
   },
   {
@@ -50,6 +59,7 @@ export class ProductListingComponent {
     SubHeader: 'Build better habits today',
     HashTags: ['productivity'],
     TotalVotes: 160,
+    URL: "https://formed.org/",
     Image: "../../../assets/Images/formed.jpg"
   },
   {
@@ -57,6 +67,7 @@ export class ProductListingComponent {
     SubHeader: 'Add hundreds of integrations to your product with one API',
     HashTags: ['api', 'saas', 'developertools'],
     TotalVotes: 79,
+    URL: "https://www.merge.dev/?utm_term=&utm_campaign=Brand:+Merge&utm_source=adwords&utm_medium=ppc&hsa_acc=3079314762&hsa_cam=14005688838&hsa_grp=137899994089&hsa_ad=590894871057&hsa_src=g&hsa_tgt=dsa-1674437112124&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQjwx5qoBhDyARIsAPbMagD4gUe4RrrvBeb0jMGBE9hghkR1aLClNSM97gexmrfskR707NZjyHQaAiT-EALw_wcB",
     Image: "../../../assets/Images/Merge.jpg"
   }]
 
@@ -106,7 +117,7 @@ export class ProductListingComponent {
     getProducts(){
       this.apiservice.GetProducts().subscribe(data => {
         if(data){
-          
+         this.Products   
         }
       });
     }
@@ -120,5 +131,10 @@ export class ProductListingComponent {
       dialogRef.afterClosed().subscribe(res => {
   
       });
+    }
+   
+      ClickUpvote(value : number, index : number){
+        this.Products[index].TotalVotes = value + 1;     
+       
     }
 }
